@@ -87,6 +87,7 @@ production:
     database: deev_match_production
     username: deev_match
     password: <%= ENV["DEEV_MATCH_DATABASE_PASSWORD"] %>
+    secret_key_base: 587ca7c5f389e46d81a873e4c43a94841e72a6e4813df203667d0204bb0507ebd65148a69a8a239325625446ca904d41c172ad20a777f566127dbd9d7d91a22d
   cache:
     <<: *primary_production
     database: deev_match_production_cache
