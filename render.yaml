@@ -1,7 +1,7 @@
 databases:
   - name: DeevMatch
-    databaseName: DeevMatch
-    user: DeevMatch
+    databaseName: deevmatch
+    user: deevmatch
     plan: free
 
 services:
