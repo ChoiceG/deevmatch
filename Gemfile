@@ -4,8 +4,6 @@ source "https://rubygems.org"
 gem "rails", "8.0.0"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
 gem "propshaft"
-# Use postgresql as the database for Active Record
-gem "pg", "~> 1.1"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "5.0"
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
@@ -59,10 +57,10 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 end
 
-# group :production do
-#   # Use postgreSQL gem for Heroku production servers
-#   gem "pg", "1.5.9"
-# end
+group :production do
+  # Use postgresql as the database for Active Record
+  gem "pg", "~> 1.1"
+end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
