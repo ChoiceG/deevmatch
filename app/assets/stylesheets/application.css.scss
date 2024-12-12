@@ -1,0 +1,68 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+@import "bootstrap";
+@import "font-awesome";
+
+// Typography Styles
+body {
+   font-family: "Open Sans", sans-serif;
+}
+
+// Added padding to the navbar
+.container-fluid {
+  padding: 10px 60px;
+}
+
+// Background Gradients
+.navbar, .home-callout {
+// Gradients provided by @i_ghosh at uiGradients.com
+  background: #009FFF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ec2F4B, #009FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+// Nav styles
+.navbar {
+  border: none;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link.active {
+  color: white;
+&:hover {
+  color: white;
+  opacity: 0.75;
+}
+}
+
+.navbar-toggler {
+  background-color: white;
+  border: none;
+  &:hover, &:focus{
+     background-color: #ec2F4B;
+  }
+}
+
+.navbar-toggler-icon{
+  background-color: none;
+}
+
+// Styled the logo
+.navbar-brand {
+  font-weight: 800;
+}
+
+// Home pages styles
+.home-callout {
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
