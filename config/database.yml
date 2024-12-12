@@ -86,11 +86,9 @@ production:
     <<: *default
     adapter: postgresql
     encoding: unicode
-    database: deevmatch_hbow
-    username: deevmatch
-    password: beLbDu5hny4xO9Yw5NzKYb3Ue3t6Nl0l
-    host: dpg-ctdh941opnds73alr9t0-a
-    port: 5432
+    database: deev_match_production
+    username: postgres
+    password: "@White190"
     secret_key_base: 587ca7c5f389e46d81a873e4c43a94841e72a6e4813df203667d0204bb0507ebd65148a69a8a239325625446ca904d41c172ad20a777f566127dbd9d7d91a22d
   cache:
     <<: *primary_production
