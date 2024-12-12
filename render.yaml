@@ -1,6 +1,6 @@
 databases:
   - name: DeevMatch
-    databaseName: DeevMatch
+    databaseName: deevmatch
     user: deevmatch
     plan: free
 
