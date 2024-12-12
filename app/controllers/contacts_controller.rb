@@ -18,14 +18,10 @@ class ContactsController < ApplicationController
           flash[:danger] = @contact.errors.full_messages.join(", ")
           redirect_to new_contact_path
       end
-
-  rescue StandardError => e
-    Rails.logger.error("Error in ContactsController#create: #{e.message}")
-    render plain: "Internal Server Error", status: :internal_server_error
   end
 
   private
-    def contact_params
-        params.require(:contact).permit(:name, :email, :comments)
-    end
+      def contact_params
+          params.require(:contact).permit(:name, :email, :comments)
+      end
 end

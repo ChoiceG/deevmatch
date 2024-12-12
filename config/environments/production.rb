@@ -38,7 +38,7 @@ Rails.application.configure do
   config.logger   = ActiveSupport::TaggedLogging.logger(STDOUT)
 
   # Change to "debug" to log everything (including potentially personally-identifiable information!)
-  config.log_level = ENV.fetch("RAILS_LOG_LEVEL", "info")
+  config.log_level = :debug
 
   # Prevent health checks from clogging up the logs.
   config.silence_healthcheck_path = "/up"
@@ -88,8 +88,5 @@ Rails.application.configure do
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
 
-  config.require_master_key = true
-  config.log_level = :debug
-  config.consider_all_requests_local = false
   config.secret_key_base = "587ca7c5f389e46d81a873e4c43a94841e72a6e4813df203667d0204bb0507ebd65148a69a8a239325625446ca904d41c172ad20a777f566127dbd9d7d91a22d"
 end
