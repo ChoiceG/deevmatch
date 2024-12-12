@@ -25,6 +25,12 @@ default: &default
 
 development:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  port: 5432
+  username: postgres
+  password: "@White190"
   database: deev_match_development
 
   # The specified database role being used to connect to PostgreSQL.
@@ -59,6 +65,12 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  port: 5432
+  username: postgres
+  password: "@White190"
   database: deev_match_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
@@ -85,8 +97,8 @@ production:
   primary: &primary_production
     <<: *default
     database: deev_match_production
-    username: postgres
-    password: "@White190"
+    username: deev_match
+    password: <%= ENV["DEEV_MATCH_DATABASE_PASSWORD"] %>
     secret_key_base: 587ca7c5f389e46d81a873e4c43a94841e72a6e4813df203667d0204bb0507ebd65148a69a8a239325625446ca904d41c172ad20a777f566127dbd9d7d91a22d
   cache:
     <<: *primary_production
