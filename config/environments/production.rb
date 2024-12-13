@@ -89,4 +89,17 @@ Rails.application.configure do
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
 
   config.secret_key_base = "587ca7c5f389e46d81a873e4c43a94841e72a6e4813df203667d0204bb0507ebd65148a69a8a239325625446ca904d41c172ad20a777f566127dbd9d7d91a22d"
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  address:              'smtp.gmail.com',
+  port:                 587,
+  user_name:            ENV['GMAIL_USERNAME'],
+  password:             ENV['GMAIL_PASSWORD'],
+  authentication:       'plain',
+  enable_starttls_auto: true
+  }
+# Ensure you set the default URL for your production app
+config.action_mailer.default_url_options = { host: 'https://deevmatch.onrender.com', protocol: 'https' }
+
 end

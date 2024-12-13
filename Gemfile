@@ -22,6 +22,8 @@ gem "sassc-rails"
 gem "font-awesome-sass"
 # Use to improve how database gets displayed
 gem "hirb", "0.7.3"
+# Use to manage environment variables
+gem "dotenv-rails", groups: [ :development, :test ]
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
