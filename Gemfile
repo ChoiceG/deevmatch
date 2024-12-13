@@ -22,8 +22,6 @@ gem "sassc-rails"
 gem "font-awesome-sass"
 # Use to improve how database gets displayed
 gem "hirb", "0.7.3"
-# Use to manage environment variables
-gem "dotenv-rails", groups: [ :development, :test ]
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
@@ -49,6 +47,9 @@ gem "thruster", require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
+  # Use to manage environment variables
+  gem "dotenv-rails" 
+
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
 
@@ -78,3 +79,5 @@ end
 ruby "3.3.6"
 
 gem "webrick", "1.9"
+
+gem "letter_opener", "~> 1.10"
