@@ -95,8 +95,8 @@ Rails.application.configure do
   address:              'smtp.gmail.com',
   port:                 587,
   domain:               'https://deevmatch.onrender.com',
-  user_name:            ENV['GMAIL_USERNAME'],
-  password:             ENV['GMAIL_PASSWORD'],
+  user_name:            'efechoice@gmail.com',
+  password:             '@Silentangel190',
   authentication:       'plain',
   enable_starttls_auto: true
   }
