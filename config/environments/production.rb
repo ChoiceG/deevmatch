@@ -92,13 +92,12 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-  address:              'smtp.gmail.com',
-  port:                 587,
-  domain:               'https://deevmatch.onrender.com',
-  user_name:            'efechoice@gmail.com',
-  password:             '@Silentangel190',
-  authentication:       'plain',
+  address: 'smtp.mailgun.org',
+  port: 587,
+  domain: "https://app.mailgun.com/app/sending/domains/sandbox2bf6a875aee649ee9e332574575a5a2d.mailgun.org", # Add this to your environment variables
+  user_name:  "postmaster@sandbox2bf6a875aee649ee9e332574575a5a2d.mailgun.org", # Add this to your environment variables
+  password: "2bbabc3b81e506ed96ed1a623cd0ad66-da554c25-b9772fb9", # Add this to your environment variables
+  authentication: 'plain',
   enable_starttls_auto: true
-  }
-
+}
 end

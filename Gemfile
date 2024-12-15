@@ -80,4 +80,4 @@ ruby "3.3.6"
 
 gem "webrick", "1.9"
 
-gem "letter_opener", "~> 1.10"
+gem "mailgun-ruby", "~> 1.2.6"
