@@ -391,7 +391,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   kamal
-  mailgun-ruby (~> 1.2.6)
+  mailgun-ruby
   pg (~> 1.1)
   propshaft
   puma (= 5.0)

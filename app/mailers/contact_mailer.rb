@@ -8,10 +8,10 @@ class ContactMailer < ApplicationMailer
     @email = email
     @body = body
 
-    mg_client = Mailgun::Client.new(ENV['MAILGUN_API_KEY']) #Use the API key here
+    mg_client = Mailgun::Client.new(ENV['MAILGUN_API_KEY']) #Use the API key
 
-    mg_client.send_message(ENV['MAILGUN_DOMAIN'],{
+    domain = ENV['MAILGUN_DOMAIN']
+
     mail(from: email, subject: "Contact Form Message")
-    })
   end
 end
