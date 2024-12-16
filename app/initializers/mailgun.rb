@@ -1,7 +1,6 @@
-require "mailgun-ruby"
+require 'mailgun-ruby'
 
 Mailgun.configure do |config|
-    config.api_key = "https://api:YOUR_API_KEY"\
-  	"@api.mailgun.net/v3/sandbox2bf6a875aee649ee9e332574575a5a2d.mailgun.org/messages",
-    config.domain = "https://app.mailgun.com/app/sending/domains/sandbox2bf6a875aee649ee9e332574575a5a2d.mailgun.org"
+    config.api_key = ENV['MAILGUN_API_KEY'],
+    config.domain = ENV['MAILGUN_DOMAIN']
 end
