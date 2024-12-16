@@ -22,4 +22,6 @@ services:
       - key: WEB_CONCURRENCY
         value: 2 # sensible default
       - key: MAILGUN_API_KEY
+        sync: false
       - key: MAILGUN_DOMAIN
+        sync: false
