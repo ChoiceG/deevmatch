@@ -22,6 +22,4 @@ services:
       - key: WEB_CONCURRENCY
         value: 2 # sensible default
       - key: MAILGUN_API_KEY
-        value: "a0c8c7fb072924982ce588144533e17e-0920befd-247d4927"
       - key: MAILGUN_DOMAIN
-        value: https://app.mailgun.com/app/sending/domains/sandbox2bf6a875aee649ee9e332574575a5a2d.mailgun.org
